@@ -10,4 +10,5 @@ main = do
   quickCheckWith stdArgs { maxSuccess = 1000 } prop_nonPrimesAreComposite
   quickCheck prop_factorsMakeOriginal
   quickCheck prop_allFactorsPrime
+  quickCheck prop_displayResultsWorksFineWithValue
   putStrLn "done!"
