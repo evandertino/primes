@@ -26,6 +26,7 @@ library:
   source-dirs: src
   exposed-modules:
     - Lib.Primes
+    - Lib.PrimeError
 
 executables:
   primes-exe:
