@@ -21,10 +21,10 @@ isPrime n | n < 2              = Nothing
 
 unsafePrimeFactors :: Int -> [Int] -> [Int]
 unsafePrimeFactors 0 []              = []
-unsafePrimeFactors n []              = []
-unsafePrimeFactors n (next : primes) = if n `mod` next == 0
-  then next : unsafePrimeFactors (n `div` next) (next : primes)
-  else unsafePrimeFactors n primes
+unsafePrimeFactors _ []              = []
+unsafePrimeFactors n (next : primeNumbers) = if n `mod` next == 0
+  then next : unsafePrimeFactors (n `div` next) (next : primeNumbers)
+  else unsafePrimeFactors n primeNumbers
 
 primeFactors :: Int -> Maybe [Int]
 primeFactors n | n < 2              = Nothing
