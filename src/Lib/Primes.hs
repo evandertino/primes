@@ -20,8 +20,8 @@ isPrime n | n < 2              = Nothing
           | otherwise          = Just (n `elem` primes)
 
 unsafePrimeFactors :: Int -> [Int] -> [Int]
-unsafePrimeFactors 0 []              = []
-unsafePrimeFactors _ []              = []
+unsafePrimeFactors 0 []                    = []
+unsafePrimeFactors _ []                    = []
 unsafePrimeFactors n (next : primeNumbers) = if n `mod` next == 0
   then next : unsafePrimeFactors (n `div` next) (next : primeNumbers)
   else unsafePrimeFactors n primeNumbers
